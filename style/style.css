@@ -1,0 +1,137 @@
+body{
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    border: 0px;
+    padding: 0px;
+    background-color: aqua;
+    } 
+    /* barra de navegacion */
+    header{
+        display: flex;
+        height: 25%;
+        width: 100%;
+        background-color: rgb(148, 159, 219);
+    }
+    
+    .ulNav {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    .ulNav li {
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .ulNav li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    
+    li:hover{
+      transition: 250ms;
+      text-decoration: underline;
+    }
+    .imgLogo{
+        width: 25%;
+        height: 100%;
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        justify-content: flex-start;
+    }
+    .nombreSuper{
+        display: flex;
+        height: 100%;
+        width: 30%;
+    }
+    .nombreSuper h1{
+        align-items: center;
+    }
+    .barraNav{
+        height: 100%;
+        width: 45%;
+    }
+    nav{
+        width: 75%;
+        height: 100%;
+    }
+    /* section: ofertas */
+    section{
+        width: 100%;
+        height: 45%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .ofertas{
+        text-align: center;
+    }
+    .ofertas img{
+        max-width: 100%; 
+    }
+    figcaption {
+        font-size: 25px;
+        color: #555;
+        background-color: orangered;
+    }
+    
+    .combo,.yerba,.fideos {
+        padding-top: 5px;
+        width: 100%;
+        height: 85%;
+    }
+    /* article */
+    .imgSup{
+        height: 45%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .imagenEntrada{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    article h2{
+        text-align: center;
+    }
+    /* footer parte final de la pagina*/
+    footer{
+        display: flex;
+        height: 25%;
+        width: 100%;
+        background-color: rgb(61, 61, 165);
+        flex-wrap: wrap;
+    }
+    .derechos{
+        
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-left: 40%;
+    }
+    
+    .lista{
+        margin-bottom: 0px;
+        margin-left: 40%;
+        justify-content: start;
+        align-items: center;
+    }
+    .finDer{
+        justify-content: start;
+        height: 100%;
+        width: 50%;
+    }
+    .finIzq{
+        justify-content: end;
+        height: 100%;
+        width: 50%;
+    }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/contacto.css">
+    <title>Trabajo Final</title>
+</head>
+
+<body>
+    <header>
+        <div class="imgLogo"><img class="img" src="../imagenes/logo.png" alt="Logo del supermercado"></div>
+        <div class="nombreSuper">
+            <h1>Super ahorro</h1>
+        </div>
+        <div class="barraNav">
+            <nav>
+                <ul class="ulNav">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    
+    <article>
+        <div class="subtitulo">
+            <h2>Dejanos tus datos y opiniones</h2>
+        </div>
+        <form>
+            <div class="nomAp">
+                <div class="nombre">
+                    <label for="nombre">Nombre:</label>
+                    <input class="nom" type="text" id="nombre">
+                </div>
+                <div class="apellido">
+                    <label for="apellido">Apellido:</label>
+                    <input class="ap" type="text" id="apellido">
+                </div>
+            </div>
+            <div class="emailTel">
+            <div class="email">
+                <label for="email">Email:</label>
+                <input class="correo" type="email" name="Email" id="email">
+            </div>
+            <div class="telefono">
+                <label for="telefono">Telefono:</label>
+                <input class="tel" type="text" name="telefono" id="telefono">
+            </div>
+        </div>
+            <div class="cajaDeComentarios">
+                <label class="opinion" for="opinion"> Dejanos tu opinion</label>
+                <textarea class="box" name="box" id="box"></textarea>
+            </div>
+            <div class="btn">
+                <button class="boton" id="enviar">Enviar</button>
+            </div>
+        </form>
+    </article>
+
+    <footer>
+        <div class="finIzq">
+            <h3 class="derechos">Todos los derechos reservados @lorem </h3>
+            <h3 class="derechos">Created by: Jose Alfredo Laplace / Leandro Contreras</h3>
+
+        </div>
+        <div class="finDer">
+            <ul>
+                <li>
+                    <h3>contactenos por todos nuestros medios y canales:</h3>
+                </li>
+                <li>correo</li>
+                <li>whatsapp</li>
+                <li>facebook</li>
+                <li>instagram</li>
+                <li>X</li>
+            </ul>
+        </div>
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="../script/contacto.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+
+/* body{
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    border: 0px;
+    padding: 0px;
+    background-color: aqua;
+    }  */
+    *{
+        border: 0px;
+        padding: 0px;
+    }
+    body {
+        display: flex;
+        height: 500px;
+        width: 1335px;
+        background-color: aquamarine;
+        border-radius: 1%;
+        border: 2px solid cadetblue;
+        flex-wrap: wrap;
+    }
+header{
+    display: flex;
+    height: 25%;
+    width: 100%;
+    background-color: rgb(148, 159, 219);
+}
+
+.ulNav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.ulNav li {
+    margin: 0;
+    padding: 10px;
+}
+
+.ulNav li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+li:hover{
+  transition: 250ms;
+  text-decoration: underline;
+}
+.imgLogo{
+    width: 25%;
+    height: 100%;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    justify-content: flex-start;
+}
+.nombreSuper{
+    display: flex;
+    height: 100%;
+    width: 30%;
+}
+.nombreSuper h1{
+    align-items: center;
+}
+.barraNav{
+    height: 100%;
+    width: 45%;
+}
+nav{
+    width: 75%;
+    height: 100%;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70%;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.subtitulo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    height: 90%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nomAp,.emailTel{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nombre,.apellido,.email,.telefono {
+    border-radius: 10px;
+    border:solid black 1px;
+    height: 15%;
+}
+.nom,.ap,.correo,.tel{
+    height: 100%;
+}
+
+.cajaDeComentarios {
+    border: solid black 1px;
+    border-radius: 10px;
+}
+.opinion{
+    text-align: center;
+}
+.box{
+    height: 90%;
+    width: 100%;
+}
+.btn{
+    height: 10%;
+    width: 20%;
+    border: solid black 1px;
+}
+.boton{
+    height: 100%;
+    width: 100%;
+    border-bottom: 100%;
+}
+
+footer{
+    display: flex;
+    height: 30%;
+    width: 100%;
+    background-color: rgb(61, 61, 165);
+    flex-wrap: wrap;
+    padding-top: 4px;
+}
+.derechos{
+    
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: 40%;
+}
+
+.lista{
+    margin-bottom: 0px;
+    margin-left: 40%;
+    justify-content: start;
+    align-items: center;
+}
+.finDer{
+    justify-content: start;
+    height: 100%;
+    width: 50%;
+}
+.finIzq{
+    justify-content: end;
+    height: 100%;
+    width: 50%;
+}
