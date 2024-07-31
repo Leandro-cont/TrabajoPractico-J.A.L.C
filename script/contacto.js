@@ -8,13 +8,18 @@ let informacion = [];
 
 btnEnviar.addEventListener("click", (e)=> {
     // e.preventDefault();
+    if ((nombre.value != "")&(apellido.value != "")&(email.value != "")&(telefono.value != "")&(box.value != "")) {
     informacion[0] = nombre.value;
     informacion[1] = apellido.value;
     informacion[2] = email.value;
     informacion[3] = telefono.value;
     informacion[4] = box.value;
 
-    let blob = new Blob([informacion], {type: "text/plain;charset=utf-8"});
+    let blob = new Blob([informacion], {type: "text/plain; charset=utf-8"});
 
     saveAs(blob, "datos.txt");
+    } else {
+        alert("Todos los campos son obligatorios");
+    }
+    
 })

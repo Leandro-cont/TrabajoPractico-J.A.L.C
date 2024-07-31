@@ -1,27 +1,19 @@
-
-/* body{
-    height: 100vh;
-    width: 98vw;
-    display: flex;
-    flex-wrap: wrap;
+* {
     border: 0px;
     padding: 0px;
-    background-color: aqua;
-    }  */
-    *{
-        border: 0px;
-        padding: 0px;
-    }
-    body {
-        display: flex;
-        height: 500px;
-        width: 1335px;
-        background-color: aquamarine;
-        border-radius: 1%;
-        border: 2px solid cadetblue;
-        flex-wrap: wrap;
-    }
-header{
+}
+
+body {
+    display: flex;
+    height: 500px;
+    width: 1335px;
+    background-color: aquamarine;
+    border-radius: 1%;
+    border: 2px solid cadetblue;
+    flex-wrap: wrap;
+}
+
+header {
     display: flex;
     height: 25%;
     width: 100%;
@@ -45,33 +37,39 @@ header{
     color: rgb(0, 0, 0);
 }
 
-li:hover{
-  transition: 250ms;
-  text-decoration: underline;
+li:hover {
+    transition: 250ms;
+    text-decoration: underline;
 }
-.imgLogo{
+
+.imgLogo {
     width: 25%;
     height: 100%;
 }
-.img{
+
+.img {
     width: 100%;
     height: 100%;
-    object-fit:contain;
+    object-fit: contain;
     justify-content: flex-start;
 }
-.nombreSuper{
+
+.nombreSuper {
     display: flex;
     height: 100%;
     width: 30%;
 }
-.nombreSuper h1{
+
+.nombreSuper h1 {
     align-items: center;
 }
-.barraNav{
+
+.barraNav {
     height: 100%;
     width: 45%;
 }
-nav{
+
+nav {
     width: 75%;
     height: 100%;
 }
@@ -83,61 +81,79 @@ article {
     width: 100%;
     padding-bottom: 10px;
 }
-.subtitulo{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
+
+.subtitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-h2{
+
+h2 {
     text-align: center;
 }
-form{
+
+form {
     display: flex;
     height: 90%;
     width: 100%;
     flex-direction: row;
     justify-content: space-around;
 }
-.nomAp,.emailTel{
+
+.nomAp,
+.emailTel {
     width: 25%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.nombre,.apellido,.email,.telefono {
+
+.nombre,
+.apellido,
+.email,
+.telefono {
     border-radius: 10px;
-    border:solid black 1px;
+    border: solid black 1px;
     height: 15%;
 }
-.nom,.ap,.correo,.tel{
+
+.nom,
+.ap,
+.correo,
+.tel {
     height: 100%;
+    width: 70%;
 }
 
 .cajaDeComentarios {
     border: solid black 1px;
     border-radius: 10px;
 }
-.opinion{
+
+.opinion {
     text-align: center;
 }
-.box{
+
+.box {
     height: 90%;
     width: 100%;
 }
-.btn{
+
+.btn {
     height: 10%;
     width: 20%;
     border: solid black 1px;
 }
-.boton{
+
+.boton {
     height: 100%;
     width: 100%;
     border-bottom: 100%;
 }
 
-footer{
+footer {
     display: flex;
     height: 30%;
     width: 100%;
@@ -145,26 +161,29 @@ footer{
     flex-wrap: wrap;
     padding-top: 4px;
 }
-.derechos{
-    
+
+.derechos {
+
     justify-content: center;
     align-items: center;
     margin-bottom: 0px;
     margin-left: 40%;
 }
 
-.lista{
+.lista {
     margin-bottom: 0px;
     margin-left: 40%;
     justify-content: start;
     align-items: center;
 }
-.finDer{
+
+.finDer {
     justify-content: start;
     height: 100%;
     width: 50%;
 }
-.finIzq{
+
+.finIzq {
     justify-content: end;
     height: 100%;
     width: 50%;

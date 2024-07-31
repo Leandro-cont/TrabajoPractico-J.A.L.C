@@ -1,6 +1,6 @@
 
-let imgProductos = ['../imagenes/panCasero.png', '../imagenes/Aceite_Natura.png', '../imagenes/Arroz_Gallo.png', '../imagenes/Arroz_Molto.png', '../imagenes/Azucar .png', '../imagenes/Cafe.png', '../imagenes/carnes.png', '../imagenes/Fideos_Canale.png', '../imagenes/Galletitas_Chocolinas.png', '../imagenes/Harina.png', '../imagenes/huevos.png', '../imagenes/Leche_La Serenisima.png', '../imagenes/lecheAlpura.png', '../imagenes/Manteca.png', '../imagenes/Mermelada_Frutilla.png', '../imagenes/Picadillo_carne.png', '../imagenes/Pure_Tomates.png', '../imagenes/Shampoo_Dove.png', '../imagenes/Shampoo_Elvive.png', '../imagenes/carroDeCompras.png']
-let arrProductos = [        'Pan Casero x Kg',        `Aceite Natura x 1LTs`,            'Arroz Gallo x kg',           'Arroz Molto x kg',             'Azucar x kg',            'cafe x 170 grs',        'Paleta x kg',            'Fideos x 1Kg',                   'Galletitas x 250grs',                   'Harina x 1kg',          'huevos x 12unid',         'leche x 1lts',                     'Leche x 1 lts',                 'Manteca x 250 grs',                'Mermelada ',                    'Picadillo carne',                'Pure tomates ',            'shampoo 750cc',                      'shampoo 250cc',            'Hace tu compra..ya!']
+let imgProductos = ['../imagenes/panCasero.png', '../imagenes/Aceite_Natura.png', '../imagenes/Arroz_Gallo.png', '../imagenes/Arroz_Molto.png', '../imagenes/Azucar .png', '../imagenes/Cafe.png', '../imagenes/carnes.png', '../imagenes/Fideos_Canale.png', '../imagenes/Galletitas_Chocolinas.png', '../imagenes/Harina.png', '../imagenes/huevos.png', '../imagenes/Leche_La Serenisima.png', '../imagenes/lecheAlpura.png', '../imagenes/Manteca.png', '../imagenes/Mermelada_Frutilla.png', '../imagenes/Picadillo_carne.png', '../imagenes/Pure_Tomates.png', '../imagenes/Shampoo_Dove.png', '../imagenes/Shampoo_Elvive.png', '../imagenes/carroDeCompras.png'];
+let arrProductos = [        'Pan Casero x Kg',        `Aceite Natura x 1LTs`,            'Arroz Gallo x kg',           'Arroz Molto x kg',             'Azucar x kg',            'cafe x 170 grs',        'Paleta x kg',            'Fideos x 1Kg',                   'Galletitas x 250grs',                   'Harina x 1kg',          'huevos x 12unid',         'leche x 1lts',                     'Leche x 1 lts',                 'Manteca x 250 grs',                'Mermelada ',                    'Picadillo carne',                'Pure tomates ',            'shampoo 750cc',                      'shampoo 250cc',            'Hace tu compra..ya!'];
 let arrPrecios = [1500, 1800, 1600, 1500, 1050, 3500, 7000, 1300, 1200, 1000, 4500, 1500, 1600, 2000, 1800, 1000, 1500, 2500, 2600, 0];
 let arrStockProductos = [50, 30, 20, 15, 15, 30, 20, 10, 5, 55, 20, 25, 50, 30, 54, 50, 45, 45, 15, 0];
 let pagProd = 1;
@@ -66,7 +66,8 @@ function clickComprar(datoCantidad, tarjetaNum, numPagina) {
     let paginaActual = numPagina;
     let numProductoComprado = (8 * (paginaActual - 1) + numeroTarjeta) - 1
     let precioProdComprado = arrPrecios[numProductoComprado];
-
+    document.getElementById(`cantComprar${numeroTarjeta}`).value=0;
+   
     if ((arrStockProductos[numProductoComprado] < cantComprada) || (numProductoComprado == (arrProductos.length - 1))) {
 
         document.getElementById(`precioProducto${numeroTarjeta}`).innerHTML = "Quedan en stock : " + arrStockProductos[numProductoComprado] + "Productos "
@@ -100,36 +101,14 @@ btncomprarCarrito.addEventListener('click', () => { confirmarCompra(); });
 
 function cancelarCompra() {
     alert("Cancelar compra ");
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
 }
 
-let arrStockCorriente = [];
 function confirmarCompra() {
 
-    guardarProductos();
+    document.getElementById("TotalCompra").innerHTML = "Su compra Total $ " + valorAcumuladoCarrito;
 
 }
-
-
-
-// guardar array stock en un string
-
-function guardarProductos() {
-
-    document.getElementById("TotalCompra").innerHTML = "Tconf compra..dentro   "
-    let stringStockActual = "";
-    const nombreArchivo = 'StockActual.txt';
-    for (let i = 0; i < arrStockProductos.length; i++) {
-
-
-        stringStockActual = stringStockActual + `${arrStockProductos[i]} `;
-        document.getElementById("TotalCompra").innerHTML = ".dentro   " + stringStockActual
-
-    }
-
-    /*fs.writeFileSync(nombreArchivo,stringStockActual);*/
-}
-
 
 // Adir el evento click a cada boton
 
@@ -157,47 +136,3 @@ tarjeta7.addEventListener('click', () => { clickComprar(parseInt(tarjeta7.previo
 
 let tarjeta8 = document.getElementById('comprarProducto8');
 tarjeta8.addEventListener('click', () => { clickComprar(parseInt(tarjeta8.previousElementSibling.value), 8, pagProd); });
-
-
-
-/*
-
-//********************************************************
-
-console.log("Comienzo de programa ,tema persistencia con archivo .txt");
-let preciosProductos: string="";
-let descripcionDeProductos:string="";
-//carga de vectores 
-const precios: number[] = [525, 3500, 400, 1999];
-const productos: string[] = ["Leche", "Galletitas", "Harina","Queso"];
-
-
- 
-// guardar los datos string en archivo .txt
-  fs.writeFileSync('./productos.txt',descripcionDeProductos);
-  
-
-
-
-    console.log(preciosProductos);
-    console.log(descripcionDeProductos);
-
-    //*******************funcion stock actual */
-function leerArrStockActual() {
-
-    let datoPrecios = fs.readFileSync('./precios.txt', "utf8");
-    let datostockSinEspacio = datoPrecios.trim();
-
-    let nuevoArregloPrecios = [];
-    nuevoArregloPrecios = datoStockSinEspacio.split(" ");// recupera datos sin espacios en arreglo
-}
-
-/*
-let datoProductos:string =fs.readFileSync('./productos.txt', "utf8");
-let datoProductoSinEspacio=datoProductos.trim();// Quitar espacios en blanco
-  
-// recuperar los datos sin espacio en una matriz(Todos datos tipo string incluido numeros)
-  
-  let nuevoArregloproductos:string[]=datoProductoSinEspacio.split(" ");
-  console.log(nuevoArregloPrecios);
-  console.log(nuevoArregloproductos);*/
