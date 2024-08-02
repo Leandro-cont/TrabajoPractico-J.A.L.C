@@ -62,7 +62,10 @@ function cargaCard(pagProd) {
 // Funcion que se ejecuta al hacer clic en cualquier botón para cargar en carrito
 function clickComprar(datoCantidad, tarjetaNum, numPagina) {
     let cantComprada = datoCantidad;
-    let numeroTarjeta = tarjetaNum;
+    if(cantComprada <= 0){
+        alert("Ingrese valor mayor a cero");
+    } else if(cantComprada>0){
+        let numeroTarjeta = tarjetaNum;
     let paginaActual = numPagina;
     let numProductoComprado = (8 * (paginaActual - 1) + numeroTarjeta) - 1
     let precioProdComprado = arrPrecios[numProductoComprado];
@@ -81,6 +84,8 @@ function clickComprar(datoCantidad, tarjetaNum, numPagina) {
         cargaCard(paginaActual);
 
     }
+    }
+    
 
 }
 
