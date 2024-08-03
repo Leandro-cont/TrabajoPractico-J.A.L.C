@@ -61,7 +61,7 @@ function cargaCard(pagProd) {
 
 // Funcion que se ejecuta al hacer clic en cualquier botón para cargar en carrito
 function clickComprar(datoCantidad, tarjetaNum, numPagina) {
-    let cantComprada = datoCantidad;
+    let cantComprada = parseInt(datoCantidad);
     if(cantComprada <= 0){
         alert("Ingrese valor mayor a cero");
     } else if(cantComprada>0){
@@ -80,7 +80,7 @@ function clickComprar(datoCantidad, tarjetaNum, numPagina) {
         let stockAnterior = arrStockProductos[numProductoComprado]
         arrStockProductos[numProductoComprado] = stockAnterior - cantComprada;
         agregarAlCarrito(cantComprada, precioProdComprado);
-        alert("Producto agregado al carrito..!");
+        alert(cantComprada + " Producto agregado al carrito..!");
         cargaCard(paginaActual);
 
     }
@@ -111,7 +111,7 @@ function cancelarCompra() {
 
 function confirmarCompra() {
 
-    document.getElementById("TotalCompra").innerHTML = "Su compra Total $ " + valorAcumuladoCarrito;
+    document.getElementById("TotalCompra").innerHTML = "Su compra fue exitosa Total $ " + valorAcumuladoCarrito;
 
 }
 
